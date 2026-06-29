@@ -1,5 +1,5 @@
-# Shared with ../requirements.txt — install from parent repo root:
-#   pip install -r ../requirements.txt
+# Install from this submodule directory:
+#   pip install -r requirements.txt
 numpy>=1.24
 scipy>=1.10
 pyyaml>=6.0
