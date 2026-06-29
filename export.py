@@ -17,6 +17,7 @@ if str(ROOT) not in sys.path:
 
 from common.csv_io import read_material_nk_table, read_tabulated_xy_um
 from common.interpolation import merge_n_alpha_to_nk
+from common.nk_validate import validate_tabulated_nk
 from common.logging_util import MaterialLogger
 from common.name_sanitize import sanitize_path_segment
 from common.yml_emit import write_tabulated_nk_yml, write_tabulated_spectra_yml
@@ -97,22 +98,6 @@ def is_leaf_spectrum(dir_path: Path) -> bool:
     return _data_json_item_type(dir_path) == "spectra"
 
 
-def _validate_nk(wl_um: np.ndarray, n_vals: np.ndarray, k_vals: np.ndarray, log: MaterialLogger) -> None:
-    if wl_um.size == 0:
-        log.warn("empty wavelength grid")
-        return
-    if not np.all(np.diff(wl_um) > 0):
-        log.warn("wavelength grid is not strictly increasing after dedupe")
-    if np.any(~np.isfinite(n_vals)):
-        log.warn("non-finite n values present")
-    if np.any(~np.isfinite(k_vals)):
-        log.warn("non-finite k values present")
-    if np.any(n_vals < 0):
-        log.warn("negative n values present")
-    if np.any(k_vals < 0):
-        log.warn("negative k values present")
-
-
 def export_material(src_dir: Path, out_yml: Path, log_dir: Path) -> bool:
     rel = src_dir.name
     log = MaterialLogger(rel, log_dir)
@@ -137,7 +122,7 @@ def export_material(src_dir: Path, out_yml: Path, log_dir: Path) -> bool:
                 )
 
         wl_um, n_out, k_out = merge_n_alpha_to_nk(wl_n, n_vals, wl_alpha, alpha_vals)
-        _validate_nk(wl_um, n_out, k_out, log)
+        validate_tabulated_nk(wl_um, n_out, k_out, log)
 
         out_yml.parent.mkdir(parents=True, exist_ok=True)
         write_tabulated_nk_yml(
