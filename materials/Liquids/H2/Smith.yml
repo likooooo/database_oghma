@@ -1,0 +1,110 @@
+TAGS:
+- og
+- benchmark
+REFERENCES: ''
+COMMENTS: ''
+CONDITIONS: ''
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: NaN
+  refractive_index_absolute: NaN
+  n:
+    type: tabulated
+    curve:
+      type: tabulated_curve
+      x:
+      - 0.16797
+      - 0.16845999999999997
+      - 0.16979
+      - 0.16991
+      - 0.17045
+      - 0.17134000000000002
+      - 0.17223
+      - 0.17709
+      - 0.18169
+      - 0.18475
+      - 0.18506999999999998
+      - 0.18546
+      - 0.18627000000000002
+      - 0.19013
+      - 0.19357999999999997
+      - 0.19776
+      - 0.19832
+      - 0.1989
+      - 0.19905
+      - 0.20588
+      - 0.21248000000000003
+      - 0.22089
+      - 0.22116
+      - 0.22174000000000002
+      - 0.23029
+      - 0.23791
+      - 0.24359000000000003
+      - 0.25077
+      - 0.25169
+      - 0.25293
+      - 0.25356
+      - 0.26321
+      - 0.27536
+      - 0.28824
+      - 0.28945
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels:
+        n:
+        - 1.000189
+        - 1.000189
+        - 1.000188
+        - 1.000187
+        - 1.000187
+        - 1.000186
+        - 1.000185
+        - 1.000182
+        - 1.000179
+        - 1.000177
+        - 1.000177
+        - 1.000176
+        - 1.000176
+        - 1.000174
+        - 1.000172
+        - 1.00017
+        - 1.00017
+        - 1.000169
+        - 1.000169
+        - 1.000167
+        - 1.000164
+        - 1.000162
+        - 1.000161
+        - 1.000161
+        - 1.000159
+        - 1.000157
+        - 1.000156
+        - 1.000155
+        - 1.000155
+        - 1.000154
+        - 1.000154
+        - 1.000153
+        - 1.000151
+        - 1.000149
+        - 1.000149
+  k:
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: -Infinity
+    wl_max: Infinity
+    coefficients:
+    - 0.0
+  thermal_dispersion:
+    type: schott_formula_a
+    coefficients:
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+  partial_pressure_water_Pa: NaN
+  name: og/H2/Smith

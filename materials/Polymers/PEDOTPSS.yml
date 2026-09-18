@@ -1,0 +1,114 @@
+TAGS:
+- og
+- benchmark
+REFERENCES: ''
+COMMENTS: 'Export warnings:
+
+  n grid (16 pts) and alpha grid (17 pts) differ; keeping separate λ grids (no merge/resample);
+  α→k on alpha points only'
+CONDITIONS: ''
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: NaN
+  refractive_index_absolute: NaN
+  n:
+    type: tabulated
+    curve:
+      type: tabulated_curve
+      x:
+      - 0.35451900000000003
+      - 0.36805600000000005
+      - 0.38075600000000004
+      - 0.39687900000000004
+      - 0.416386
+      - 0.447795
+      - 0.480878
+      - 0.509752
+      - 0.542
+      - 0.5632429999999999
+      - 0.590419
+      - 0.6447579999999999
+      - 0.690618
+      - 0.737314
+      - 0.768737
+      - 0.8001600000000001
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels:
+        n:
+        - 1.44112
+        - 1.43096
+        - 1.42335
+        - 1.42081
+        - 1.41574
+        - 1.4132
+        - 1.40558
+        - 1.40558
+        - 1.40305
+        - 1.40305
+        - 1.40305
+        - 1.40051
+        - 1.40051
+        - 1.39797
+        - 1.39797
+        - 1.39797
+  k:
+    type: tabulated
+    curve:
+      type: tabulated_curve
+      x:
+      - 0.35095
+      - 0.37590999999999997
+      - 0.39868000000000003
+      - 0.43613999999999997
+      - 0.46919
+      - 0.50373
+      - 0.52505
+      - 0.55298
+      - 0.58239
+      - 0.61181
+      - 0.63387
+      - 0.6625599999999999
+      - 0.6941999999999999
+      - 0.72511
+      - 0.7494100000000001
+      - 0.77516
+      - 0.7994600000000001
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels:
+        k:
+        - 0.0165242696059533
+        - 0.017515226150380748
+        - 0.020258603045584477
+        - 0.02394777372363423
+        - 0.02673661930009324
+        - 0.033056155985511114
+        - 0.03755546899601501
+        - 0.04384545301969811
+        - 0.051021346630297185
+        - 0.059080816393529585
+        - 0.06534731548197907
+        - 0.07428404052744891
+        - 0.0849963885976371
+        - 0.09570523446330255
+        - 0.10638493324973247
+        - 0.11530828052646071
+        - 0.12686902057291435
+  thermal_dispersion:
+    type: schott_formula_a
+    coefficients:
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+  partial_pressure_water_Pa: NaN
+  name: og/PEDOTPSS

@@ -2,3 +2,5 @@ __pycache__/
 *.py[cod]
 .cache/
 logs/
+oghma_projects/
+.DS_Store

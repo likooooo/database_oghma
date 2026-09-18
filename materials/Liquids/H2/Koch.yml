@@ -1,0 +1,80 @@
+TAGS:
+- og
+- benchmark
+REFERENCES: ''
+COMMENTS: ''
+CONDITIONS: ''
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: NaN
+  refractive_index_absolute: NaN
+  n:
+    type: tabulated
+    curve:
+      type: tabulated_curve
+      x:
+      - 0.23020000000000002
+      - 0.2379
+      - 0.24470000000000003
+      - 0.24639999999999998
+      - 0.2535
+      - 0.2577
+      - 0.2675
+      - 0.27530000000000004
+      - 0.276
+      - 0.28570000000000007
+      - 0.2894
+      - 0.2926
+      - 0.2968
+      - 0.3342
+      - 0.3544
+      - 0.39070000000000005
+      - 0.3985
+      - 0.41090000000000004
+      - 0.4917
+      - 0.5461999999999999
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels:
+        n:
+        - 1.000159
+        - 1.000158
+        - 1.000156
+        - 1.000156
+        - 1.000155
+        - 1.000154
+        - 1.000153
+        - 1.000151
+        - 1.000151
+        - 1.00015
+        - 1.00015
+        - 1.00015
+        - 1.000149
+        - 1.000146
+        - 1.000145
+        - 1.000143
+        - 1.000143
+        - 1.000143
+        - 1.000141
+        - 1.00014
+  k:
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: -Infinity
+    wl_max: Infinity
+    coefficients:
+    - 0.0
+  thermal_dispersion:
+    type: schott_formula_a
+    coefficients:
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+  partial_pressure_water_Pa: NaN
+  name: og/H2/Koch

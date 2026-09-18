@@ -1,0 +1,60 @@
+TAGS:
+- og
+- benchmark
+REFERENCES: ''
+COMMENTS: ''
+CONDITIONS: ''
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: NaN
+  refractive_index_absolute: NaN
+  n:
+    type: tabulated
+    curve:
+      type: tabulated_curve
+      x:
+      - 0.3612
+      - 0.365
+      - 0.40629999999999994
+      - 0.4358
+      - 0.47000000000000003
+      - 0.4806
+      - 0.5085999999999999
+      - 0.5461
+      - 0.578
+      - 0.6439
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels:
+        n:
+        - 1.5058
+        - 1.5047
+        - 1.4962
+        - 1.4921
+        - 1.4884
+        - 1.4873
+        - 1.4848
+        - 1.4821
+        - 1.48
+        - 1.4775
+  k:
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: -Infinity
+    wl_max: Infinity
+    coefficients:
+    - 0.0
+  thermal_dispersion:
+    type: schott_formula_a
+    coefficients:
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+  partial_pressure_water_Pa: NaN
+  name: og/Sinnock-solid-90K

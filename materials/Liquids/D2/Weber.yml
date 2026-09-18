@@ -1,0 +1,76 @@
+TAGS:
+- og
+- benchmark
+REFERENCES: ''
+COMMENTS: ''
+CONDITIONS: ''
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: NaN
+  refractive_index_absolute: NaN
+  n:
+    type: tabulated
+    curve:
+      type: tabulated_curve
+      x:
+      - 0.230209
+      - 0.234555
+      - 0.23799900000000002
+      - 0.244691
+      - 0.24640700000000001
+      - 0.25763
+      - 0.26749900000000004
+      - 0.275278
+      - 0.275971
+      - 0.28935700000000003
+      - 0.29254100000000005
+      - 0.33414800000000006
+      - 0.380166
+      - 0.410807
+      - 0.491604
+      - 0.546074
+      - 0.576959
+      - 0.5790649999999999
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels:
+        n:
+        - 1.000157
+        - 1.000156
+        - 1.000155
+        - 1.000154
+        - 1.000153
+        - 1.000152
+        - 1.00015
+        - 1.000149
+        - 1.000149
+        - 1.000148
+        - 1.000147
+        - 1.000144
+        - 1.000142
+        - 1.00014
+        - 1.000139
+        - 1.000138
+        - 1.000137
+        - 1.000137
+  k:
+    type: analytic_formula
+    formula: formula_vl_constant
+    wl_min: -Infinity
+    wl_max: Infinity
+    coefficients:
+    - 0.0
+  thermal_dispersion:
+    type: schott_formula_a
+    coefficients:
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+  partial_pressure_water_Pa: NaN
+  name: og/Weber

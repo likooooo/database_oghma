@@ -1,0 +1,133 @@
+TAGS:
+- og
+- benchmark
+REFERENCES: ''
+COMMENTS: ''
+CONDITIONS: ''
+DATA:
+  type: isotropic_dispersion
+  T_ref_C: NaN
+  refractive_index_absolute: NaN
+  n:
+    type: tabulated
+    curve:
+      type: tabulated_curve
+      x:
+      - 0.8
+      - 0.9
+      - 1.0
+      - 1.1
+      - 1.1500000000000001
+      - 1.2
+      - 1.3
+      - 1.4000000000000001
+      - 1.5
+      - 1.7
+      - 2.0
+      - 2.5
+      - 3.0
+      - 4.0
+      - 5.0
+      - 6.0
+      - 7.0
+      - 8.0
+      - 9.0
+      - 10.0
+      - 11.0
+      - 12.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels:
+        n:
+        - 2.38
+        - 2.94
+        - 3.46
+        - 3.68
+        - 3.75
+        - 3.74
+        - 3.65
+        - 3.46
+        - 3.29
+        - 3.12
+        - 3.09
+        - 3.62
+        - 4.4
+        - 6.18
+        - 8.49
+        - 11.0
+        - 13.8
+        - 16.6
+        - 19.3
+        - 22.0
+        - 24.8
+        - 27.8
+  k:
+    type: tabulated
+    curve:
+      type: tabulated_curve
+      x:
+      - 0.8
+      - 0.9
+      - 1.0
+      - 1.1
+      - 1.1500000000000001
+      - 1.2
+      - 1.3
+      - 1.4000000000000001
+      - 1.5
+      - 1.7
+      - 2.0
+      - 2.5
+      - 3.0
+      - 4.0
+      - 5.0
+      - 6.0
+      - 7.0
+      - 8.0
+      - 9.0
+      - 10.0
+      - 11.0
+      - 12.0
+      x_unit: um
+      interpolator: linear
+      endpoint_low: clamp
+      endpoint_high: clamp
+      interpolator_params: {}
+      channels:
+        k:
+        - 6.6799999999999935
+        - 7.280000000000018
+        - 7.400000000000001
+        - 7.500000000000002
+        - 7.580000000000001
+        - 7.679999999999999
+        - 7.9199999999999955
+        - 8.259999999999998
+        - 8.720000000000004
+        - 9.919999999999995
+        - 11.799999999999997
+        - 14.8
+        - 17.800000000000008
+        - 23.2
+        - 28.500000000000004
+        - 33.10000000000001
+        - 37.099999999999994
+        - 40.599999999999994
+        - 43.8
+        - 46.40000000000003
+        - 48.99999999999998
+        - 51.60000000000006
+  thermal_dispersion:
+    type: schott_formula_a
+    coefficients:
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+    - NaN
+  partial_pressure_water_Pa: NaN
+  name: og/Pure_Gol64
